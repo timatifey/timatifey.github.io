@@ -1,0 +1,299 @@
+:root {
+    --white-color: #F5F6FA;
+    --black-color: #0F224D;
+    --gray-color: #98A0B2;
+    --blue-color: #214AA6;
+    --green-color: #28743D;
+    --gray-blue-color: #E2E5EC;
+    --separator-color: #F0F1F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--white-color);
+}
+
+header {
+    background: var(--separator-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 50px;
+}
+
+p, span {
+    color: var(--black-color);
+    font-family: Roboto, sans-serif;
+}
+
+.main-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.avatar {
+    height: 271px;
+    width: 271px;
+    align-self: center;
+    margin: 20px 50px 20px 20px;
+}
+
+.name {
+    width: 442px;
+    height: 233px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.name-text {
+    display: inline-block;
+    height: 125px;
+    font-size: 50px;
+}
+
+.android {
+    display: block;
+    font-size: 35px;
+    color: var(--green-color);
+    vertical-align: center;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.location-icon {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: url('../asset/icon-location.svg');
+}
+
+.location-text {
+    font-size: 20px;
+    display: flex;
+    align-self: center;
+    margin-left: 5px;
+}
+
+.location {
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+}
+
+.right-block {
+    height: 262px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contacts {
+    width: 442px;
+    height: 182px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.email-icon {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background: url('../asset/icon-email.svg');
+    background-size: contain;
+    align-self: center;
+}
+
+.telegram-icon {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background: url('../asset/icon-telegram.svg');
+    background-size: contain;
+    align-self: center;
+}
+
+.github-icon {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background: url('../asset/icon-github.svg');
+    background-size: contain;
+    align-self: center;
+}
+
+a, .contact-text {
+    font-family: Roboto, sans-serif;
+    color: var(--black-color);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.contacts-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+}
+
+.contacts-link:hover {
+    color: var(--blue-color);
+}
+
+.download-pdf-icon {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: url('../asset/icon-download-file.svg');
+}
+
+.download-pdf-btn {
+    display: flex;
+    justify-content: center;
+    height: 42px;
+    width: 227px;
+    background-color: var(--black-color);
+    border-radius: 50px;
+    align-self: flex-start;
+}
+
+.download-pdf-btn:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--blue-color);
+}
+
+.download-pdf-btn-text {
+    color: var(--white-color);
+    font-family: Roboto Light, sans-serif;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 1350px) {
+    header, .main-info {
+        flex-direction: column;
+    }
+    .avatar {
+        margin: 20px;
+    }
+    .name-text, .android {
+        text-align: center;
+    }
+
+    .location {
+        align-self: center;
+    }
+
+    .contacts {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .download-pdf-btn {
+        display: flex;
+        align-self: center;
+    }
+}
+
+section::after {
+    display: block;
+    content: '';
+    height: 3px;
+    background: var(--separator-color);
+}
+
+.section-title {
+    margin: 20px 20px 20px 80px;
+    font-size: 40px;
+    font-family: Roboto L, sans-serif;
+    color: var(--black-color);
+    display: flex;
+    letter-spacing: 1px;
+}
+.section-content {
+    margin: 0 80px 30px 80px;
+}
+
+.tablet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--blue-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.tablet-gray {
+    background: var(--gray-color);
+}
+
+li {
+    font-family: Roboto, sans-serif;
+    color: var(--black-color);
+    font-size: 20px;
+    margin-left: 20px;
+}
+.card {
+    box-sizing: border-box;
+    background: var(--gray-blue-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.card-name {
+    font-family: Roboto, sans-serif;
+    color: var(--black-color);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-family: Roboto, sans-serif;
+    color: var(--black-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.card-span-title {
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    color: var(--black-color);
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.stack-content {
+  margin-left: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.link-project {
+    display: flex;
+    margin-top: 10px;
+}
