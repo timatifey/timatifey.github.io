@@ -259,8 +259,9 @@ li {
 
 .card-name {
     font-family: Roboto, sans-serif;
-    color: var(--black-color);
-    font-size: 25px;
+    color: var(--blue-color);
+    //color: var(--black-color);
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -296,4 +297,11 @@ li {
 .link-project {
     display: flex;
     margin-top: 10px;
+}
+
+.update-date {
+    display: flex;
+    color: var(--gray-color);
+    margin: 10px 8% 10px 10px;
+    justify-content: flex-end;
 }
