@@ -3,9 +3,17 @@
     --black-color: #0F224D;
     --gray-color: #98A0B2;
     --blue-color: #214AA6;
-    --green-color: #28743D;
+    --green-color: #1b663e;
     --gray-blue-color: #E2E5EC;
     --separator-color: #F0F1F5;
+
+
+    --android-black-color: #0a2f42;
+    --android-gray-color: #12435b;
+
+    --android-background-color: #f7f9fc;
+    --android-white-color: #f7f9fc;
+    --android-green-color: #3bd984;
 }
 
 * {
@@ -14,15 +22,17 @@
 }
 
 body {
-    background: var(--white-color);
+    background: #e7eaee;
 }
 
 header {
-    background: var(--separator-color);
+    background: rgb(14,63,88);
+    background: linear-gradient(0deg, rgba(14,63,88,1) 0%, rgba(10,47,66,1) 14%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0 20px 50px;
+    margin-bottom: 20px;
 }
 
 p, span {
@@ -54,12 +64,13 @@ p, span {
     display: inline-block;
     height: 125px;
     font-size: 50px;
+    color: var(--android-white-color);
 }
 
 .android {
     display: block;
     font-size: 35px;
-    color: var(--green-color);
+    color: var(--android-green-color);
     vertical-align: center;
     height: 45px;
     margin-bottom: 10px;
@@ -69,7 +80,14 @@ p, span {
     display: inline-block;
     height: 30px;
     width: 30px;
-    background: url('../asset/icon-location.svg');
+    /*background: url('../asset/icon-location.svg');*/
+    color: var(--android-white-color);
+}
+
+.android-icon {
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
 }
 
 .location-text {
@@ -77,6 +95,7 @@ p, span {
     display: flex;
     align-self: center;
     margin-left: 5px;
+    color: var(--android-white-color);
 }
 
 .location {
@@ -104,6 +123,7 @@ p, span {
     display: inline-block;
     height: 35px;
     width: 35px;
+    color: var(--android-white-color);
     background: url('../asset/icon-email.svg');
     background-size: contain;
     align-self: center;
@@ -129,7 +149,7 @@ p, span {
 
 a, .contact-text {
     font-family: Roboto, sans-serif;
-    color: var(--black-color);
+    color: var(--android-white-color);
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -139,44 +159,70 @@ a, .contact-text {
 .contacts-link {
     cursor: pointer;
     text-decoration: none;
+    color: var(--android-white-color);
+}
+
+.card-contacts-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--android-black-color);
+}
+
+.card-contacts-link:hover {
+    color: var(--android-green-color);
+}
+
+.card-github-icon {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background: url('../asset/icon-card-github.svg');
+    background-size: contain;
+    align-self: center;
 }
 
 .contact-item {
+    color: var(--android-white-color);
     display: flex;
     justify-content: flex-start;
     height: 50px;
 }
 
 .contacts-link:hover {
-    color: var(--blue-color);
+    color: var(--android-green-color);
 }
 
 .download-pdf-icon {
     display: inline-block;
     height: 30px;
     width: 30px;
-    background: url('../asset/icon-download-file.svg');
+    color: var(--android-black-color);
 }
 
 .download-pdf-btn {
+    transition: all 500ms ease-out;
+
     display: flex;
     justify-content: center;
+    text-decoration: none;
     height: 42px;
     width: 227px;
-    background-color: var(--black-color);
+    background-color: var(--android-green-color);
     border-radius: 50px;
     align-self: flex-start;
 }
 
 .download-pdf-btn:hover {
+    transform: scale(1.06);
+
     cursor: pointer;
     text-decoration: none;
-    background-color: var(--blue-color);
 }
 
 .download-pdf-btn-text {
-    color: var(--white-color);
-    font-family: Roboto Light, sans-serif;
+    text-decoration: none;
+    color: var(--android-black-color);
+    font-family: Roboto Regular, sans-serif;
     font-size: 20px;
     margin-left: 5px;
 }
@@ -185,9 +231,11 @@ a, .contact-text {
     header, .main-info {
         flex-direction: column;
     }
+
     .avatar {
         margin: 20px;
     }
+
     .name-text, .android {
         text-align: center;
     }
@@ -207,86 +255,118 @@ a, .contact-text {
     }
 }
 
-section::after {
-    display: block;
-    content: '';
-    height: 3px;
-    background: var(--separator-color);
-}
+/*section::after {*/
+/*    display: block;*/
+/*    content: '';*/
+/*    height: 3px;*/
+/*    background: var(--separator-color);*/
+/*}*/
 
 .section-title {
-    margin: 20px 20px 20px 80px;
-    font-size: 40px;
-    font-family: Roboto L, sans-serif;
-    color: var(--black-color);
-    display: flex;
-    letter-spacing: 1px;
+
+    padding: 10px 20px 10px 40px;
+    font-size: 25px;
+    font-family: "Roboto Regular", sans-serif;
+    color: var(--android-green-color);
+    background: var(--android-gray-color);
+    border-radius: 4px;
+    display: block;
+    /*letter-spacing: 1px;*/
 }
+
 .section-content {
-    margin: 0 80px 30px 80px;
+    margin: 15px 5px 30px 5px;
 }
 
 .tablet {
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--blue-color);
-    color: var(--white-color);
+    background: var(--android-black-color);
+    color: var(--android-white-color);
     padding: 10px 20px;
-    border-radius: 50px;
+    border-radius: 4px;
     margin-right: 5px;
     margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tablet-gray {
     background: var(--gray-color);
 }
 
+.tablet-green {
+    background: var(--android-green-color);
+}
+
 li {
     font-family: Roboto, sans-serif;
-    color: var(--black-color);
+    color: var(--android-black-color);
     font-size: 20px;
     margin-left: 20px;
 }
+
 .card {
-    box-sizing: border-box;
-    background: var(--gray-blue-color);
-    border-radius: 20px;
+    box-sizing: content-box;
+    background: var(--android-background-color);
+    border-radius: 4px;
     padding: 20px;
     margin: 15px;
+    width: calc(42%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-column {
+    box-sizing: content-box;
+    background: var(--android-background-color);
+    border-radius: 4px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.empty {
+    margin-left: 20px;
 }
 
 .card-name {
-    font-family: Roboto, sans-serif;
-    color: var(--blue-color);
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 25px;
+    color: var(--android-black-color);
+    padding: 5px;
 }
 
 .card-text {
     font-family: Roboto, sans-serif;
-    color: var(--black-color);
+    color: var(--android-black-color);
     font-size: 20px;
     margin-bottom: 10px;
-    margin-left: 20px;
 }
 
 .card-span-title {
     display: inline-block;
-    font-family: Roboto, sans-serif;
+    font-family: Roboto Bold, sans-serif;
     font-weight: bold;
-    color: var(--black-color);
+    color: var(--android-black-color);
     font-size: 20px;
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .stack-content {
-  margin-left: 20px;
+    margin-left: 20px;
+    color: var(--android-black-color);
 }
 
-.cards {
+.cards-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cards-column {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -301,6 +381,20 @@ li {
 .update-date {
     display: flex;
     color: var(--gray-color);
-    margin: 10px 8% 10px 10px;
+    margin: 10px 2% 10px 10px;
     justify-content: flex-end;
+}
+
+.columns {
+    display: flex;
+}
+.left-column {
+    margin-left: 40px;
+    margin-right: 20px;
+    width: calc(60%);
+}
+.right-column {
+    width: calc(40%);
+    margin-left: 20px;
+    margin-right: 40px;
 }

@@ -8,179 +8,230 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="main-info">
-            <img src="asset/avatar.png" class="avatar" alt="avatar image"/>
-            <div class="name">
-                <span class="name-text">Плетнев Тимофей Сергеевич</span>
-                <span class="android">Android-разработчик</span>
-                <div class="location">
-                    <i class="location-icon"></i>
-                    <span class="location-text">Санкт-Петербург</span>
-                </div>
+<header>
+    <div class="main-info">
+        <img src="asset/avatar.png" class="avatar" alt="avatar image"/>
+        <div class="name">
+            <span class="name-text">Плетнев Тимофей Сергеевич</span>
+            <span class="android">
+                <img src="asset/icon-android.svg" class="android-icon"/>
+                Android-разработчик
+            </span>
+            <div class="location">
+                <img src="asset/icon-location.svg" class="location-icon"/>
+                <span class="location-text">Санкт-Петербург, 20 лет</span>
             </div>
         </div>
-        <div class="right-block">
-            <div class="contacts">
-                <div class="contact-item contacts-email">
-                    <i class="email-icon"></i>
-                    <span class="contact-text">timofeypletnev.001@gmail.com</span>
-                </div>
-                <div class="contact-item contacts-telegram">
-                    <i class="telegram-icon"></i>
-                    <a class="contacts-link" href="https://t.me/timatifey">t.me/timatifey</a>
-                </div>
-                <div class="contact-item contacts-github">
-                    <i class="github-icon"></i>
-                    <a class="contacts-link" href="https://github.com/timatifey">github.com/timatifey</a>
-                </div>
+    </div>
+    <div class="right-block">
+        <div class="contacts">
+            <div class="contact-item contacts-email">
+                <i class="email-icon"></i>
+                <a class="contacts-link" href="mailto:timofeypletnev.001@gmail.com">timofeypletnev.001@gmail.com</a>
             </div>
-            <a class="download-pdf-btn" href="asset/CV-Pletnev_TS.pdf">
-                <i class="download-pdf-icon"></i>
-                <span class="download-pdf-btn-text">Открыть PDF</span>
-            </a>
-        </div>
-    </header>
-    <section>
-        <h1 class="section-title">НАВЫКИ И УМЕНИЯ</h1>
-        <div class="section-content">
-            <span class="tablet">Android SDK</span>
-            <span class="tablet">Java</span>
-            <span class="tablet">Kotlin</span>
-            <span class="tablet">SQL</span>
-            <span class="tablet">Retrofit 2</span>
-            <span class="tablet">Room</span>
-            <span class="tablet">Dagger 2</span>
-            <span class="tablet">Hilt</span>
-            <span class="tablet">Git</span>
-            <span class="tablet">Gradle</span>
-            <span class="tablet">Clean Architecture</span>
-            <span class="tablet">SOLID</span>
-            <span class="tablet">RESTful API</span>
-            <span class="tablet tablet-gray">HTML/CSS</span>
-        </div>
-    </section>
-    <section>
-        <h1 class="section-title">ОПЫТ РАБОТЫ</h1>
-        <ul class="section-content">
-            <li>Учебные работы/проекты в университете</li>
-            <li>Фриланс</li>
-        </ul>
-    </section>
-    <section>
-        <h1 class="section-title">ПРОЕКТЫ</h1>
-        <div class="section-content cards">
-            <div class="card">
-                <h2 class="card-name">Harmony</h2>
-                <p class="card-text">Android-клиент RESTful API сервиса музыкальных рекомендаций для группы пользователей</p>
-                <span class="card-span-title">Стэк:</span>
-                <ul class="stack-content">
-                    <li>Kotlin</li>
-                    <li>Retrofit 2</li>
-                    <li>Room</li>
-                    <li>Dagger 2</li>
-                    <li>Glide</li>
-                </ul>
-                <div class="link-project">
-                    <i class="github-icon"></i>
-                    <a class="contacts-link" href="https://github.com/Harmony-Team/Harmony-Android-2">GitHub project</a>
-                </div>
+            <div class="contact-item contacts-telegram">
+                <i class="telegram-icon"></i>
+                <a class="contacts-link" href="https://t.me/timatifey">t.me/timatifey</a>
             </div>
-            <div class="card">
-                <h2 class="card-name">Stock Aggregator</h2>
-                <p class="card-text">
-                    Учебное приложение для отображения акций компаний со списком избранного и поиском
-                </p>
-                <span class="card-span-title">Стэк:</span>
-                <ul class="stack-content">
-                    <li>Kotlin</li>
-                    <li>Retrofit 2</li>
-                    <li>Room</li>
-                    <li>Dagger 2</li>
-                    <li>Navigation component</li>
-                </ul>
-                <div class="link-project">
-                    <i class="github-icon"></i>
-                    <a class="contacts-link" href="https://github.com/TiMaTiFeY/StockAggregator">GitHub project</a>
-                </div>
-            </div>
-            <div class="card">
-                <h2 class="card-name">Stud Services</h2>
-                <p class="card-text">
-                    Приложение площадка взаимопомощи для студентов
-                </p>
-                <span class="card-span-title">Стэк:</span>
-                <ul class="stack-content">
-                    <li>Kotlin</li>
-                    <li>Retrofit 2</li>
-                    <li>Room</li>
-                    <li>Dagger 2</li>
-                    <li>Firebase</li>
-                </ul>
-                <div class="link-project">
-                    <i class="github-icon"></i>
-                    <a class="contacts-link" href="https://github.com/StudServices/StudServices-Android">GitHub project</a>
-                </div>
-            </div>
-            <div class="card">
-                <h2 class="card-name">Todo-list</h2>
-                <p class="card-text">
-                    Приложение для списка задач
-                </p>
-                <span class="card-span-title">Стэк:</span>
-                <ul class="stack-content">
-                    <li>Kotlin</li>
-                    <li>Room</li>
-                    <li>Dagger 2</li>
-                </ul>
-                <div class="link-project">
-                    <i class="github-icon"></i>
-                    <a class="contacts-link" href="https://github.com/timatifey/todo-list">GitHub project</a>
-                </div>
+            <div class="contact-item contacts-github">
+                <i class="github-icon"></i>
+                <a class="contacts-link" href="https://github.com/timatifey">github.com/timatifey</a>
             </div>
         </div>
-    </section>
-    <section>
-        <h1 class="section-title">ОБРАЗОВАНИЕ</h1>
-        <div class="section-content cards">
-            <div class="card">
-                <h2 class="card-name">Санкт-Петербургский политехнический университет Петра Великого</h2>
-                <p class="card-span-title">Информатика и вычислительная техника:</p>
-                <ul class="stack-content">
-                    <li>Алгоритмизация и программирование (Kotlin)</li>
-                    <li>Технологии программирования (Java)</li>
-                    <li>Алгоритмы и структуры данных</li>
-                </ul>
-                <span class="card-span-title">2019 - сейчас</span>
+        <a class="download-pdf-btn" href="asset/CV-Pletnev_TS.pdf">
+            <img src="asset/icon-download-file.svg" class="download-pdf-icon"/>
+            <span class="download-pdf-btn-text">Открыть PDF</span>
+        </a>
+    </div>
+</header>
+<div class="columns">
+    <div class="left-column">
+        <section>
+            <h1 class="section-title">ОПЫТ РАБОТЫ</h1>
+            <ul class="section-content cards-column">
+                <div class="card-column">
+                    <h2 class="card-name">GORA Studio</h2>
+                    <p class="card-span-title">Android-разработчик:</p>
+                    <ul class="stack-content">
+                        <li>Поддержка мессенджера и добавление нового функционала</li>
+                        <li>Создание архитектуры нового приложения</li>
+                    </ul>
+                    <span class="card-span-title">июль 2021 - сейчас</span>
+                </div>
+                <div class="card-column">
+                    <h2 class="card-name">Harmony</h2>
+                    <p class="card-span-title">Android-разработчик:</p>
+                    <ul class="stack-content">
+                        <li>Написание приложения с нуля</li>
+                    </ul>
+                    <span class="card-span-title">февраль 2021 - май 2021</span>
+                </div>
+                <div class="card-column">
+                    <h2 class="card-name">Учебные проекты в университете</h2>
+                    <span class="card-span-title">март 2020 - сейчас</span>
+                </div>
+            </ul>
+        </section>
+        <section>
+            <h1 class="section-title">ПРОЕКТЫ</h1>
+            <div class="section-content cards-row">
+                <div class="card">
+                    <h2 class="card-name">Harmony</h2>
+                    <p class="card-text">Android-клиент RESTful API сервиса музыкальных рекомендаций для группы
+                        пользователей</p>
+                    <span class="card-span-title">Стэк:</span>
+                    <ul class="stack-content">
+                        <li>Kotlin</li>
+                        <li>Retrofit 2</li>
+                        <li>Room</li>
+                        <li>Dagger 2</li>
+                        <li>Glide</li>
+                    </ul>
+                    <div class="link-project">
+                        <i class="card-github-icon"></i>
+                        <a class="card-contacts-link" href="https://github.com/Harmony-Team/Harmony-Android-2">GitHub
+                            project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card-name">Stock Aggregator</h2>
+                    <p class="card-text">
+                        Учебное приложение для отображения акций компаний со списком избранного и поиском
+                    </p>
+                    <span class="card-span-title">Стэк:</span>
+                    <ul class="stack-content">
+                        <li>Kotlin</li>
+                        <li>Retrofit 2</li>
+                        <li>Room</li>
+                        <li>Dagger 2</li>
+                        <li>Navigation component</li>
+                    </ul>
+                    <div class="link-project">
+                        <i class="card-github-icon"></i>
+                        <a class="card-contacts-link" href="https://github.com/TiMaTiFeY/StockAggregator">GitHub
+                            project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card-name">Stud Services</h2>
+                    <p class="card-text">
+                        Приложение площадка взаимопомощи для студентов
+                    </p>
+                    <span class="card-span-title">Стэк:</span>
+                    <ul class="stack-content">
+                        <li>Kotlin</li>
+                        <li>Retrofit 2</li>
+                        <li>Room</li>
+                        <li>Dagger 2</li>
+                        <li>Firebase</li>
+                    </ul>
+                    <div class="link-project">
+                        <i class="card-github-icon"></i>
+                        <a class="card-contacts-link" href="https://github.com/StudServices/StudServices-Android">GitHub
+                            project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card-name">Todo-list</h2>
+                    <p class="card-text">
+                        Приложение для списка задач
+                    </p>
+                    <span class="card-span-title">Стэк:</span>
+                    <ul class="stack-content">
+                        <li>Kotlin</li>
+                        <li>Room</li>
+                        <li>Dagger 2</li>
+                    </ul>
+                    <div class="link-project">
+                        <i class="card-github-icon"></i>
+                        <a class="card-contacts-link" href="https://github.com/timatifey/todo-list">GitHub project</a>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h2 class="card-name">Технополис Mail.ru при СПБПУ</h2>
-                <p class="card-span-title">2-х летняя программа Java - разработчик высоконагруженных приложений:</p>
-                <ul class="stack-content">
-                    <li>Алгоритмы и структуры данных</li>
-                    <li>Фронтенд разработка</li>
-                    <li>Углубленная Java</li>
-                    <li>Мобильная разработка</li>
-                </ul>
-                <span class="card-span-title">2020 - сейчас</span>
+        </section>
+    </div>
+    <div class="right-column">
+        <section>
+            <h1 class="section-title">НАВЫКИ И УМЕНИЯ</h1>
+            <div class="section-content empty">
+                <span class="tablet">Android SDK</span>
+                <span class="tablet">Java</span>
+                <span class="tablet">Kotlin</span>
+                <span class="tablet">SQL</span>
+                <span class="tablet">Retrofit 2</span>
+                <span class="tablet">Room</span>
+                <span class="tablet">Dagger 2</span>
+                <span class="tablet">Dagger Hilt</span>
+                <span class="tablet">Navigation Component</span>
+                <span class="tablet">Kotlin Coroutines</span>
+                <span class="tablet tablet-gray">Git</span>
+                <span class="tablet tablet-gray">Gradle</span>
+                <span class="tablet tablet-gray">Clean Architecture</span>
+                <span class="tablet tablet-gray">MVP</span>
+                <span class="tablet tablet-gray">MVVM</span>
+                <span class="tablet tablet-gray">SOLID</span>
+                <span class="tablet tablet-gray">RESTful API</span>
+                <span class="tablet tablet-gray">Jira</span>
+                <span class="tablet tablet-gray">HTML/CSS</span>
+                <span class="tablet tablet-gray">Figma</span>
             </div>
-        </div>
-    </section>
-    <section>
-        <h1 class="section-title">ЯЗЫКИ</h1>
-        <ul class="section-content">
-            <li>Английский - B1 средний</li>
-        </ul>
-    </section>
-    <section>
-        <h1 class="section-title">КУРСЫ</h1>
-        <ul class="section-content">
-            <li>Udacity: Android Basics</li>
-            <li>Developer.android: Android Kotlin fundamentals</li>
-        </ul>
-    </section>
+        </section>
+        <section>
+            <h1 class="section-title">ОБРАЗОВАНИЕ</h1>
+            <div class="section-content cards-column">
+                <div class="card-column">
+                    <h2 class="card-name">Санкт-Петербургский политехнический университет Петра Великого</h2>
+                    <p class="card-span-title">Информатика и вычислительная техника:</p>
+                    <ul class="stack-content">
+                        <li>Алгоритмизация и программирование (Kotlin)</li>
+                        <li>Технологии программирования (Java)</li>
+                        <li>Алгоритмы и структуры данных</li>
+                        <li>Проектирование мобильных приложений</li>
+                    </ul>
+                    <span class="card-span-title">сентябрь 2019 - сейчас</span>
+                </div>
+                <div class="card-column">
+                    <h2 class="card-name">Технополис Mail.ru при СПБПУ</h2>
+                    <p class="card-span-title">2-х летняя программа Java - разработчик высоконагруженных приложений:</p>
+                    <ul class="stack-content">
+                        <li>Алгоритмы и структуры данных</li>
+                        <li>Frontend разработка</li>
+                        <li>Углубленная Java</li>
+                        <li>Мобильная разработка</li>
+                    </ul>
+                    <span class="card-span-title">октябрь 2020 - сейчас</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1 class="section-title">ЯЗЫКИ</h1>
+            <div class="section-content empty">
+                <span class="tablet">Английский - B1 средний</span>
+            </div>
+        </section>
+        <section>
+            <h1 class="section-title">ПРЕПОДАВАНИЕ</h1>
+            <div class="section-content cards-column">
+                <div class="card-column">
+                    <span class="card-text">Преподавал курс по Kotlin и основам Android-разработки для школьников</span>
+                    <ul></ul>
+                    <span class="card-span-title">июнь - июль 2021</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1 class="section-title">ХОББИ</h1>
+            <div class="section-content empty">
+                <span class="tablet">Танцы</span>
+                <span class="tablet">Волейбол</span>
+                <span class="tablet">Фотография</span>
+                <span class="tablet">Дубляж</span>
+            </div>
+        </section>
+    </div>
+</div>
 </body>
 <footer>
-    <span class="update-date">Update date: 07.07.2021</span>
+    <span class="update-date">Update date: 28.08.2021</span>
 </footer>
 </html>
