@@ -201,7 +201,6 @@ a, .contact-text {
 
 .download-pdf-btn {
     transition: all 500ms ease-out;
-
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -214,7 +213,6 @@ a, .contact-text {
 
 .download-pdf-btn:hover {
     transform: scale(1.06);
-
     cursor: pointer;
     text-decoration: none;
 }
@@ -227,52 +225,45 @@ a, .contact-text {
     margin-left: 5px;
 }
 
-@media screen and (max-width: 1350px) {
-    header, .main-info {
-        flex-direction: column;
-    }
-
-    .avatar {
-        margin: 20px;
-    }
-
-    .name-text, .android {
-        text-align: center;
-    }
-
-    .location {
-        align-self: center;
-    }
-
-    .contacts {
-        display: flex;
-        align-self: flex-start;
-    }
-
-    .download-pdf-btn {
-        display: flex;
-        align-self: center;
-    }
-}
-
-/*section::after {*/
-/*    display: block;*/
-/*    content: '';*/
-/*    height: 3px;*/
-/*    background: var(--separator-color);*/
-/*}*/
-
 .section-title {
-
     padding: 10px 20px 10px 40px;
+    /*transition-duration: 500ms;*/
+    /*animation: slideout 1s ease-out;*/
     font-size: 25px;
     font-family: "Roboto Regular", sans-serif;
     color: var(--android-green-color);
     background: var(--android-gray-color);
     border-radius: 4px;
     display: block;
-    /*letter-spacing: 1px;*/
+    letter-spacing: 1px;
 }
+
+/*.section-title:hover {*/
+/*    animation: slidein 500ms ease-in;*/
+/*    padding-left: 80px;*/
+/*}*/
+
+/*@keyframes slidein {*/
+/*    0% {*/
+/*        padding-left: 40px;*/
+/*    }*/
+
+/*    100% {*/
+/*       padding-left: 80px;*/
+/*    }*/
+/*}*/
+
+
+/*@keyframes slideout {*/
+/*    0% {*/
+/*        padding-left: 80px;*/
+/*    }*/
+
+/*    100% {*/
+/*        padding-left: 40px;*/
+/*    }*/
+/*}*/
+
 
 .section-content {
     margin: 15px 5px 30px 5px;
@@ -388,6 +379,7 @@ li {
 .columns {
     display: flex;
 }
+
 .left-column {
     margin-left: 40px;
     margin-right: 20px;
@@ -397,4 +389,63 @@ li {
     width: calc(40%);
     margin-left: 20px;
     margin-right: 40px;
+}
+
+@media screen and (max-width: 1350px) {
+    header, .main-info {
+        flex-direction: column;
+    }
+
+    .avatar {
+        margin: 20px;
+    }
+
+    .name-text, .android {
+        text-align: center;
+    }
+
+    .location {
+        align-self: center;
+    }
+
+    .contacts {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 100px;
+    }
+
+    .card {
+        box-sizing: content-box;
+        background: var(--android-background-color);
+        border-radius: 4px;
+        padding: 20px;
+        margin: 15px;
+        width: calc(42%);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .left-column {
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
+    .right-column {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .download-pdf-btn {
+        display: flex;
+        align-self: center;
+    }
+}
+@media screen and (max-width: 1594px) {
+    .card {
+        width: calc(100%);
+    }
 }
