@@ -1,19 +1,25 @@
 :root {
-    --white-color: #F5F6FA;
-    --black-color: #0F224D;
     --gray-color: #98A0B2;
-    --blue-color: #214AA6;
-    --green-color: #1b663e;
-    --gray-blue-color: #E2E5EC;
-    --separator-color: #F0F1F5;
+    --body-background: #d5dff0;
 
+    --text-color: #392463;
+    --tablet-first-color: #98A0B2;
+    --tablet-second-color: #98A0B2;
 
-    --android-black-color: #0a2f42;
-    --android-gray-color: #12435b;
+    --primary-color: #392463;
+    --accent-color: #4ef889;
 
-    --android-background-color: #f7f9fc;
-    --android-white-color: #f7f9fc;
-    --android-green-color: #3bd984;
+    --name-text-color: #f7f9fc;
+
+    --light-background-color: #f7f9fc;
+
+    --red-primary-color: #f6072f;
+    --red-accent-color: #d1f9f9;
+}
+
+body.theme-dark {
+    --primary-color: var(--red-primary-color);
+    --accent-color: var(--red-accent-color);
 }
 
 * {
@@ -22,12 +28,11 @@
 }
 
 body {
-    background: #e7eaee;
+    background: var(--body-background);
 }
 
 header {
-    background: rgb(14,63,88);
-    background: linear-gradient(0deg, rgba(14,63,88,1) 0%, rgba(10,47,66,1) 14%);
+    background: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,13 +41,14 @@ header {
 }
 
 p, span {
-    color: var(--black-color);
+    color: var(--text-color);
     font-family: Roboto, sans-serif;
 }
 
 .main-info {
     display: flex;
     justify-content: space-around;
+    margin-right: 48px;
 }
 
 .avatar {
@@ -66,13 +72,13 @@ p, span {
     display: inline-block;
     height: 125px;
     font-size: 50px;
-    color: var(--android-white-color);
+    color: var(--name-text-color);
 }
 
-.android {
+.android-dev {
     display: block;
     font-size: 35px;
-    color: var(--android-green-color);
+    color: var(--accent-color);
     vertical-align: center;
     height: 45px;
     margin-bottom: 10px;
@@ -83,7 +89,7 @@ p, span {
     height: 30px;
     width: 30px;
     /*background: url('../asset/icon-location.svg');*/
-    color: var(--android-white-color);
+    color: var(--name-text-color);
 }
 
 .android-icon {
@@ -97,7 +103,7 @@ p, span {
     display: flex;
     align-self: center;
     margin-left: 5px;
-    color: var(--android-white-color);
+    color: var(--name-text-color);
 }
 
 .location {
@@ -125,7 +131,7 @@ p, span {
     display: inline-block;
     height: 35px;
     width: 35px;
-    color: var(--android-white-color);
+    color: var(--name-text-color);
     background: url('../asset/icon-email.svg');
     background-size: contain;
     align-self: center;
@@ -151,7 +157,7 @@ p, span {
 
 a, .contact-text {
     font-family: Roboto, sans-serif;
-    color: var(--android-white-color);
+    color: var(--name-text-color);
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -161,17 +167,17 @@ a, .contact-text {
 .contacts-link {
     cursor: pointer;
     text-decoration: none;
-    color: var(--android-white-color);
+    color: var(--name-text-color);
 }
 
 .card-contacts-link {
     cursor: pointer;
     text-decoration: none;
-    color: var(--android-black-color);
+    color: var(--text-color);
 }
 
 .card-contacts-link:hover {
-    color: var(--android-green-color);
+    color: var(--accent-color);
 }
 
 .card-github-icon {
@@ -184,21 +190,21 @@ a, .contact-text {
 }
 
 .contact-item {
-    color: var(--android-white-color);
+    color: var(--light-background-color);
     display: flex;
     justify-content: flex-start;
     height: 50px;
 }
 
 .contacts-link:hover {
-    color: var(--android-green-color);
+    color: var(--accent-color);
 }
 
 .download-pdf-icon {
     display: inline-block;
     height: 30px;
     width: 30px;
-    color: var(--android-black-color);
+    color: var(--primary-color);
 }
 
 .download-pdf-btn {
@@ -208,7 +214,7 @@ a, .contact-text {
     text-decoration: none;
     height: 42px;
     width: 227px;
-    background-color: var(--android-green-color);
+    background-color: var(--accent-color);
     border-radius: 50px;
     align-self: flex-start;
 }
@@ -221,7 +227,7 @@ a, .contact-text {
 
 .download-pdf-btn-text {
     text-decoration: none;
-    color: var(--android-black-color);
+    color: var(--text-color);
     font-family: Roboto Regular, sans-serif;
     font-size: 20px;
     margin-left: 5px;
@@ -229,43 +235,14 @@ a, .contact-text {
 
 .section-title {
     padding: 10px 20px 10px 40px;
-    /*transition-duration: 500ms;*/
-    /*animation: slideout 1s ease-out;*/
     font-size: 25px;
     font-family: "Roboto Regular", sans-serif;
-    color: var(--android-green-color);
-    background: var(--android-gray-color);
+    color: var(--accent-color);
+    background: var(--primary-color);
     border-radius: 4px;
     display: block;
     letter-spacing: 1px;
 }
-
-/*.section-title:hover {*/
-/*    animation: slidein 500ms ease-in;*/
-/*    padding-left: 80px;*/
-/*}*/
-
-/*@keyframes slidein {*/
-/*    0% {*/
-/*        padding-left: 40px;*/
-/*    }*/
-
-/*    100% {*/
-/*       padding-left: 80px;*/
-/*    }*/
-/*}*/
-
-
-/*@keyframes slideout {*/
-/*    0% {*/
-/*        padding-left: 80px;*/
-/*    }*/
-
-/*    100% {*/
-/*        padding-left: 40px;*/
-/*    }*/
-/*}*/
-
 
 .section-content {
     margin: 15px 5px 30px 5px;
@@ -276,34 +253,30 @@ a, .contact-text {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--android-black-color);
-    color: var(--android-white-color);
+    background: var(--primary-color);
+    color: var(--name-text-color);
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 24px;
     margin-right: 5px;
     margin-top: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tablet-gray {
-    background: var(--gray-color);
-}
-
-.tablet-green {
-    background: var(--android-green-color);
+    background: var(--tablet-second-color);
 }
 
 li {
     font-family: Roboto, sans-serif;
-    color: var(--android-black-color);
+    color: var(--text-color);
     font-size: 20px;
     margin-left: 20px;
 }
 
 .card {
     box-sizing: content-box;
-    background: var(--android-background-color);
-    border-radius: 4px;
+    background: var(--light-background-color);
+    /*border-radius: 4px;*/
     padding: 20px;
     margin: 15px;
     width: calc(42%);
@@ -312,8 +285,8 @@ li {
 
 .card-column {
     box-sizing: content-box;
-    background: var(--android-background-color);
-    border-radius: 4px;
+    background: var(--light-background-color);
+    /*border-radius: 4px;*/
     padding: 20px;
     margin: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -326,22 +299,23 @@ li {
 .card-name {
     font-family: "Roboto Regular", sans-serif;
     font-size: 25px;
-    color: var(--android-black-color);
+    color: var(--text-color);
     padding: 5px;
+    margin-bottom: 8px;
 }
 
 .card-text {
     font-family: Roboto, sans-serif;
-    color: var(--android-black-color);
+    color: var(--text-color);
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .card-span-title {
     display: inline-block;
     font-family: Roboto Bold, sans-serif;
     font-weight: bold;
-    color: var(--android-black-color);
+    color: var(--text-color);
     font-size: 20px;
     margin-bottom: 5px;
     margin-top: 15px;
@@ -349,7 +323,7 @@ li {
 
 .stack-content {
     margin-left: 20px;
-    color: var(--android-black-color);
+    color: var(--text-color);
 }
 
 .cards-row {
@@ -367,8 +341,8 @@ li {
 }
 
 .link-project {
-    display: flex;
     margin-top: 10px;
+    display: flex;
 }
 
 .update-date {
@@ -402,7 +376,7 @@ li {
         margin: 20px;
     }
 
-    .name-text, .android {
+    .name-text, .android-dev {
         text-align: center;
     }
 
@@ -418,7 +392,8 @@ li {
 
     .card {
         box-sizing: content-box;
-        background: var(--android-background-color);
+        background: var(--light-background-color);
+        position: relative;
         border-radius: 4px;
         padding: 20px;
         margin: 15px;
@@ -449,5 +424,253 @@ li {
 @media screen and (max-width: 1594px) {
     .card {
         width: calc(100%);
+    }
+}
+
+/* hamburger */
+.checkbox {
+    display: none;
+}
+
+.button {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+.background {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: var(--primary-color);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.button:hover .icon::after {
+    transform: scale(1.2);
+}
+
+.button:hover .icon::before {
+    transform: scale(1.2);
+}
+
+
+.nav {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -60vw;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s;
+}
+
+.list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+.item {
+    margin: 1rem;
+    font-size: 48px;
+}
+
+.link:link, .link:visited {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+            120deg,
+            transparent 0%,
+            transparent 50%,
+            white 50%
+    );
+    background-size: 220%;
+    transition: all 0.4s;
+}
+
+.link:hover, .link:active {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* functionality */
+.checkbox:checked ~ .background {
+    transform: scale(80);
+}
+
+.checkbox:checked ~ body {
+    background: var(--primary-color);
+}
+
+.checkbox:checked ~ .nav {
+    opacity: 1;
+    width: 100%;
+    right: 0;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon, .icon::before, .icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: var(--accent-color);
+    display: inline-block;
+}
+
+.icon::before, .icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.icon::before {
+    top: -0.8rem;
+}
+.icon::after {
+    top: 0.8rem;
+}
+
+.button:hover icon:before {
+    top: -1rem;
+}
+.button:hover icon::after {
+    top: 1rem;
+}
+
+.checkbox:checked + .button .icon {
+    background-color: transparent;
+}
+
+.checkbox:checked + .button .icon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+.checkbox:checked + .button .icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+}
+
+body input {
+    display: none;
+}
+
+body .toggleWrapper {
+    position: absolute;
+    top: 15vh;
+    right: 5.5vw;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fe4551;
+    box-shadow: 0 20px 20px 0 rgba(254, 69, 81, 0.3);
+}
+body .toggleWrapper:active {
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 15px 15px 0 rgba(254, 69, 81, 0.5);
+}
+body .toggleWrapper:active .toggle {
+    height: 17px;
+    width: 17px;
+}
+body .toggleWrapper .toggle {
+    transition: all 0.2s ease-in-out;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: red 0.7s linear forwards;
+}
+
+body input:checked + .toggleWrapper {
+    background-color: #48e98a;
+    box-shadow: 0 20px 20px 0 rgba(72, 233, 138, 0.3);
+}
+body input:checked + .toggleWrapper:active {
+    box-shadow: 0 15px 15px 0 rgba(72, 233, 138, 0.5);
+}
+body input:checked + .toggleWrapper .toggle {
+    width: 0;
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 30px;
+    animation: green 0.7s linear forwards !important;
+}
+
+@keyframes red {
+    0% {
+        height: 30px;
+        width: 0;
+        border-width: 5px;
+    }
+    55% {
+        height: 13px;
+        width: 27px;
+        border-width: 10px;
+    }
+    70% {
+        height: 20px;
+        width: 20px;
+        border-width: 10px;
+    }
+    85% {
+        height: 15px;
+        width: 25px;
+        border-width: 10px;
+    }
+    100% {
+        height: 20px;
+        width: 20px;
+        border-width: 10px;
+    }
+}
+@keyframes green {
+    0% {
+        height: 20px;
+        width: 20px;
+        border-width: 10px;
+    }
+    25%, 55%, 85% {
+        height: 30px;
+        width: 5px;
+        border-width: 5px;
+    }
+    40%, 70%, 100% {
+        height: 30px;
+        width: 0;
+        border-width: 5px;
     }
 }
