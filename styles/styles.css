@@ -13,13 +13,17 @@
 
     --light-background-color: #f7f9fc;
 
-    --red-primary-color: #f6072f;
-    --red-accent-color: #d1f9f9;
+    --red-primary-color: #de3d37;
+    --red-accent-color: #c5edf9;
+    --red-text-color: #000000;
 }
 
 body.theme-dark {
     --primary-color: var(--red-primary-color);
     --accent-color: var(--red-accent-color);
+    --text-color: var(--red-text-color);
+    --body-background: #ffffff;
+    --light-background-color: #ffffff;
 }
 
 * {
