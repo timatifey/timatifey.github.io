@@ -8,6 +8,7 @@ function applyTheme(powerOn) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    applyTheme(false);
     document.querySelector("#toggle").addEventListener("change", function() {
         applyTheme(this.checked);
     });

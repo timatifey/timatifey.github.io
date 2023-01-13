@@ -1,8 +1,8 @@
 :root {
     --gray-color: #98A0B2;
-    --body-background: #d5dff0;
+    --body-background: #ffffff;
 
-    --text-color: #392463;
+    --text-color: #000000;
     --tablet-first-color: #98A0B2;
     --tablet-second-color: #98A0B2;
 
@@ -13,16 +13,17 @@
 
     --light-background-color: #f7f9fc;
 
-    --red-primary-color: #de3d37;
-    --red-accent-color: #c5edf9;
-    --red-text-color: #000000;
+    --red-primary-color: var(--blue-color);
+    --red-accent-color: rgb(255, 255, 255);
+
+    --blue-color: #1053be;
+    --gray-opacity-color: rgba(73,134,204,.08);
 }
 
 body.theme-dark {
     --primary-color: var(--red-primary-color);
     --accent-color: var(--red-accent-color);
-    --text-color: var(--red-text-color);
-    --body-background: #ffffff;
+    --body-background: rgb(255, 255, 255);
     --light-background-color: #ffffff;
 }
 
@@ -36,11 +37,11 @@ body {
 }
 
 header {
-    background: var(--primary-color);
+    /*background: var(--primary-color);*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0 20px 50px;
+    padding: 20px 50px 20px 50px;
     margin-bottom: 20px;
 }
 
@@ -51,47 +52,46 @@ p, span {
 
 .main-info {
     display: flex;
-    justify-content: space-around;
-    margin-right: 48px;
+    justify-content: start;
+    width: calc(60%);
 }
 
 .avatar {
-    height: 271px;
-    width: 271px;
+    height: 200px;
+    width: 200px;
     align-self: center;
-    margin: 20px 50px 20px 20px;
+    margin: 20px 20px 20px 20px;
     border-radius: 500px;
     object-fit: cover;
 }
 
 .name {
-    width: 442px;
-    height: 233px;
     display: flex;
+    width: max-content;
     flex-direction: column;
+    justify-content: center;
     align-self: center;
+    font-family: "Roboto Bold", sans-serif;
 }
 
 .name-text {
-    display: inline-block;
-    height: 125px;
     font-size: 50px;
-    color: var(--name-text-color);
+    font-family: "Roboto Regular", sans-serif;
+    color: var(--primary-color);
 }
 
 .android-dev {
-    display: block;
-    font-size: 35px;
-    color: var(--accent-color);
-    vertical-align: center;
-    height: 45px;
+    font-size: 25px;
+    color: var(--primary-color);
+    font-family: "Roboto Regular", sans-serif;
+    margin-left: 5px;
     margin-bottom: 10px;
 }
 
 .location-icon {
     display: inline-block;
-    height: 30px;
-    width: 30px;
+    height: 15px;
+    width: 15px;
     /*background: url('../asset/icon-location.svg');*/
     color: var(--name-text-color);
 }
@@ -103,17 +103,25 @@ p, span {
 }
 
 .location-text {
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
     align-self: center;
     margin-left: 5px;
-    color: var(--name-text-color);
+    color: #FFFFFF;
 }
 
 .location {
     display: flex;
-    justify-content: flex-start;
-    height: 30px;
+    align-self: start;
+    align-items: center;
+    width: fit-content;
+    background: var(--primary-color);
+    color: var(--name-text-color);
+    padding: 7px 7px;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .right-block {
@@ -124,8 +132,6 @@ p, span {
 }
 
 .contacts {
-    width: 442px;
-    height: 182px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -171,7 +177,7 @@ a, .contact-text {
 .contacts-link {
     cursor: pointer;
     text-decoration: none;
-    color: var(--name-text-color);
+    color: var(--text-color);
 }
 
 .card-contacts-link {
@@ -194,14 +200,14 @@ a, .contact-text {
 }
 
 .contact-item {
-    color: var(--light-background-color);
     display: flex;
     justify-content: flex-start;
+    margin-top: 10px;
     height: 50px;
 }
 
 .contacts-link:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .download-pdf-icon {
@@ -218,7 +224,7 @@ a, .contact-text {
     text-decoration: none;
     height: 42px;
     width: 227px;
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     border-radius: 50px;
     align-self: flex-start;
 }
@@ -231,18 +237,20 @@ a, .contact-text {
 
 .download-pdf-btn-text {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--accent-color);
     font-family: Roboto Regular, sans-serif;
     font-size: 20px;
     margin-left: 5px;
 }
 
 .section-title {
-    padding: 10px 20px 10px 40px;
+    padding: 10px 20px 10px 20px;
     font-size: 25px;
     font-family: "Roboto Regular", sans-serif;
+    font-weight: normal;
     color: var(--accent-color);
     background: var(--primary-color);
+    /*background: var(--gray-opacity-color);*/
     border-radius: 4px;
     display: block;
     letter-spacing: 1px;
@@ -279,21 +287,26 @@ li {
 
 .card {
     box-sizing: content-box;
-    background: var(--light-background-color);
+    /*background: var(--light-background-color);*/
     /*border-radius: 4px;*/
     padding: 20px;
     margin: 15px;
     width: calc(42%);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
 }
 
 .card-column {
     box-sizing: content-box;
-    background: var(--light-background-color);
+    /*background: var(--light-background-color);*/
     /*border-radius: 4px;*/
-    padding: 20px;
-    margin: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0 5px 45px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
+}
+
+.last {
+    padding: 0 5px 0;
 }
 
 .empty {
@@ -303,9 +316,9 @@ li {
 .card-name {
     font-family: "Roboto Regular", sans-serif;
     font-size: 25px;
-    color: var(--text-color);
-    padding: 5px;
-    margin-bottom: 8px;
+    color: var(--primary-color);
+    padding: 5px 5px 5px 0;
+    margin-bottom: 2px;
 }
 
 .card-text {
@@ -323,11 +336,28 @@ li {
     font-size: 20px;
     margin-bottom: 5px;
     margin-top: 15px;
+    margin-left: 20px;
+}
+
+.card-date {
+    display: inline-block;
+    font-family: Roboto Bold, sans-serif;
+    color: var(--text-color);
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-left: 0;
 }
 
 .stack-content {
     margin-left: 20px;
     color: var(--text-color);
+}
+
+.stack-content > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*margin: 20px;*/
 }
 
 .cards-row {
@@ -356,6 +386,10 @@ li {
     justify-content: flex-end;
 }
 
+.gray {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .columns {
     display: flex;
 }
@@ -363,18 +397,37 @@ li {
 .left-column {
     margin-left: 40px;
     margin-right: 20px;
-    width: calc(60%);
+    width: calc(50%);
 }
 .right-column {
-    width: calc(40%);
+    width: calc(50%);
     margin-left: 20px;
     margin-right: 40px;
+}
+
+.buttons {
+    display: flex;
+    align-self: start;
 }
 
 @media screen and (max-width: 1350px) {
     header, .main-info {
         flex-direction: column;
+        align-self: center;
+        margin-left: 0;
+        margin-right: 0;
     }
+
+    .right-block {
+        align-items: center;
+    }
+
+    .buttons {
+        display: flex;
+        align-self: center;
+        margin-top: 20px;
+    }
+
 
     .avatar {
         margin: 20px;
@@ -390,8 +443,7 @@ li {
 
     .contacts {
         display: flex;
-        align-items: flex-start;
-        margin-left: 100px;
+        align-items: center;
     }
 
     .card {
@@ -440,9 +492,7 @@ li {
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
-    position: absolute;
-    top: 5vh;
-    right: 5vw;
+    position: relative;
     z-index: 2000;
     text-align: center;
     cursor: pointer;
@@ -452,6 +502,7 @@ li {
 .background {
     height: 4rem;
     width: 4rem;
+    align-self: center;
     border-radius: 50%;
     background: var(--primary-color);
     z-index: 1000;
@@ -584,9 +635,8 @@ body input {
 }
 
 body .toggleWrapper {
-    position: absolute;
-    top: 15vh;
-    right: 5.5vw;
+    position: relative;
+    align-self: center;
     z-index: 3;
     display: flex;
     align-items: center;
@@ -596,13 +646,11 @@ body .toggleWrapper {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #fe4551;
-    box-shadow: 0 20px 20px 0 rgba(254, 69, 81, 0.3);
+    background-color: var(--accent-color);
 }
 body .toggleWrapper:active {
     width: 55px;
     height: 55px;
-    box-shadow: 0 15px 15px 0 rgba(254, 69, 81, 0.5);
 }
 body .toggleWrapper:active .toggle {
     height: 17px;
@@ -620,11 +668,9 @@ body .toggleWrapper .toggle {
 }
 
 body input:checked + .toggleWrapper {
-    background-color: #48e98a;
-    box-shadow: 0 20px 20px 0 rgba(72, 233, 138, 0.3);
+    background-color: var(--accent-color);
 }
 body input:checked + .toggleWrapper:active {
-    box-shadow: 0 15px 15px 0 rgba(72, 233, 138, 0.5);
 }
 body input:checked + .toggleWrapper .toggle {
     width: 0;
