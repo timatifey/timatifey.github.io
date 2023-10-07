@@ -1,7 +1,7 @@
 function applyTheme(powerOn) {
     document.body.classList.remove("theme-light", "theme-dark");
     let theme = "light";
-    if (!powerOn) {
+    if (powerOn) {
         theme = "dark";
     }
     document.body.classList.add(`theme-${theme}`);
@@ -9,7 +9,7 @@ function applyTheme(powerOn) {
 
 document.addEventListener("DOMContentLoaded", () => {
     applyTheme(false);
-    document.querySelector("#toggle").addEventListener("change", function() {
+    document.querySelector("#checkbox").addEventListener("change", function() {
         applyTheme(this.checked);
     });
 });
