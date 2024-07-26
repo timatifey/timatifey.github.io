@@ -1,42 +1,43 @@
 :root {
-    --accent-color: #FFDD2D;
-    --primary-color: #231F20;
-    --body-background-color: #f6f7f8;
+    --accent-color: #07f;
+    --primary-color: #ffffff;
+    --body-background-color: #ffffff;
 
     --section-title-border-color: rgba(0, 0, 0, 0.2);
     --card-date-color: rgb(128, 128, 128);
 
     /* no diff */
-    --header-color: var(--primary-color);
-    --hero-title-color: var(--primary-color);
-    --hero-link-color: var(--primary-color);
+    --header-color: #222;
+    --hero-title-color: #222;
+    --hero-link-color: #222;
     --hero-link-hover-color: var(--accent-color);
 
-    --hero-box-background-start-color: #FFB500;
+    --hero-box-border-color: #fff;
+    --hero-box-background-start-color: #298dff;
     --hero-box-background-end-color: var(--accent-color);
 
-    --section-title-color: var(--primary-color);
+    --section-title-color: #222;
     --section-title-background-color: rgba(255, 255, 255, 0);
 
-    --tablet-text-color: #333333;
+    --tablet-text-color: #ffffff;
     --tablet-text-second-color: #333333;
     --tablet-text-third-color: #333333;
     --tablet-background-color: var(--accent-color);
     --tablet-background-second-color: #e9ecee;
     --tablet-background-third-color: #f1ebd6;
 
-    --card-column-border-color: var(--primary-color);
+    --card-column-border-color: #222;
     --marker-color: var(--accent-color);
 
     --card-name-color: var(--primary-color);
     --card-name-background-color: var(--accent-color);
-    --card-span-title-color: var(--primary-color);
+    --card-span-title-color: #222;
 
-    --stack-content-li-color: var(--primary-color);
+    --stack-content-li-color: #222;
 }
 
 body.theme-dark {
-    --accent-color: #FFDD2D;
+    --accent-color: #3e7ffc;
     --primary-color: #e0e0e0;
     --body-background-color: #333333;
 
@@ -49,11 +50,14 @@ body.theme-dark {
     --hero-link-color: var(--primary-color);
     --hero-link-hover-color: var(--accent-color);
 
-    --hero-box-background-start-color: #FFB500;
+    --hero-box-border-color: #fff;
+    --hero-box-background-start-color: #298dff;
     --hero-box-background-end-color: var(--accent-color);
 
     --section-title-color: var(--primary-color);
     --section-title-background-color: rgba(255, 255, 255, 0);
+
+    --tablet-background-color: var(--accent-color);
 
     --card-column-border-color: var(--primary-color);
     --marker-color: var(--accent-color);
@@ -68,6 +72,12 @@ body.theme-dark {
 ::before,
 ::after {
     box-sizing: border-box;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 body {
@@ -167,7 +177,7 @@ h3 {
     max-width: 300px;
     justify-self: center;
     overflow: hidden;
-    border: 10px solid #fff;
+    border: 10px solid var(--hero-box-border-color);
 
     background-image: linear-gradient(
             to right,
@@ -310,8 +320,8 @@ h3 {
 }
 
 .stack-content > li {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     color: var(--stack-content-li-color);
     font-size: 16px;
 }
@@ -321,7 +331,7 @@ h3 {
     color: var(--card-name-color);
     margin-bottom: 0px;
     background: var(--card-name-background-color);
-    padding: 4px 8px 4px 8px;
+    padding: 8px 16px 8px 16px;
     border-radius: 4px;
     letter-spacing: 1px;
     display: block;
@@ -419,7 +429,7 @@ h3 {
 }
 
 .theme-switch input {
-    display:none;
+    display: none;
 }
 
 .slider {
