@@ -1,5 +1,5 @@
 :root {
-    --accent-color: #07f;
+    --accent-color: #ffdd2d;
     --primary-color: #ffffff;
     --body-background-color: #ffffff;
 
@@ -19,7 +19,7 @@
     --section-title-color: #222;
     --section-title-background-color: rgba(255, 255, 255, 0);
 
-    --tablet-text-color: #ffffff;
+    --tablet-text-color: #333;
     --tablet-text-second-color: #333333;
     --tablet-text-third-color: #333333;
     --tablet-background-color: var(--accent-color);
@@ -29,7 +29,7 @@
     --card-column-border-color: #222;
     --marker-color: var(--accent-color);
 
-    --card-name-color: var(--primary-color);
+    --card-name-color: #333;
     --card-name-background-color: var(--accent-color);
     --card-span-title-color: #222;
 
@@ -37,7 +37,7 @@
 }
 
 body.theme-dark {
-    --accent-color: #3e7ffc;
+    --accent-color: #ffdd2d;
     --primary-color: #e0e0e0;
     --body-background-color: #333333;
 
@@ -121,7 +121,7 @@ h3 {
 }
 
 .container {
-    max-width: 1230px;
+    max-width: 1500px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -131,6 +131,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     grid-gap: 20px;
+    padding: 0 25px;
 }
 
 
@@ -142,19 +143,22 @@ h3 {
 }
 
 .hero__title {
-    font-size: 48px;
+    font-size: 56px;
     line-height: 1.1;
     margin-bottom: 20px;
     color: var(--hero-title-color);
 }
 
 .hero__subtitle {
-    font-size: 32px;
+    font-size: 36px;
+    line-height: 0.3;
     font-weight: 400;
     color: var(--hero-title-color);
 }
 
 .hero__description {
+    line-height: 2.1;
+    font-size: 28px;
     color: var(--hero-title-color);
 }
 
@@ -233,7 +237,7 @@ h3 {
     border-bottom: 2px solid;
     border-color: var(--section-title-border-color);
     display: block;
-    text-align: center;
+    text-align: start;
     letter-spacing: 1px;
 }
 
@@ -331,7 +335,8 @@ h3 {
     color: var(--card-name-color);
     margin-bottom: 0px;
     background: var(--card-name-background-color);
-    padding: 8px 16px 8px 16px;
+    padding: 10px 16px 10px 16px;
+    line-height: 1.5;
     border-radius: 4px;
     letter-spacing: 1px;
     display: block;
@@ -341,6 +346,7 @@ h3 {
     display: inline-block;
     color: var(--card-span-title-color);
     font-size: 18px;
+    line-height: 1.5;
     margin-top: 2px;
     margin-bottom: 4px;
     margin-left: 4px;
