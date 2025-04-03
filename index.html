@@ -69,7 +69,10 @@
             </div>
         </section>
         <section>
-            <h1 class="section-title">Опыт работы</h1>
+            <div class="experience-container">
+                <h1 class="section-title" id="experience-title">Опыт работы</h1>
+                <span class="card-date" id="experience"></span>
+            </div>
             <ul class="section-content cards-column">
                 <div class="card-column">
                     <div class="card-container">
@@ -168,11 +171,6 @@
         <section>
             <h1 class="section-title">Образование</h1>
             <div class="section-content cards-column">
-                <!--                <div class="card-column">-->
-                <!--                    <span class="card-name">Магистрант <a href="https://itmo.ru/">ИТМО</a></span><br/>-->
-                <!--                    <p class="card-span-title">Мобильные и облачные технологии</p><br/>-->
-                <!--                    <span class="card-date">Сентябрь 2025 &#8212 Настоящее время</span>-->
-                <!--                </div>-->
                 <div class="card-column">
                     <div class="card-container">
                         <a href="https://itmo.ru/">
@@ -182,6 +180,23 @@
                         </a>
                         <span class="card-name">Магистрант <a href="https://itmo.ru/">Университета ИТМО</a></span>
                     </div>
+<!--                    <p class="card-span-title"><a href="https://abit.itmo.ru/program/master/cloud">Мобильные и облачные-->
+<!--                        технологии 09.04.03</a></p>-->
+<!--                    <ul class="stack-content">-->
+<!--                        <li>Методология организации проектирования и разработки информационных систем</li>-->
+<!--                        <li>Разработка мобильных приложений</li>-->
+<!--                        <li>Архитектура сетей и облачные технологии</li>-->
+<!--                        <li>Хранение и обработка облачных данных</li>-->
+<!--                        <li>Системный анализ и моделирование информационных процессов и систем</li>-->
+<!--                        <li>Администрирование платформ на OC Linux</li>-->
+<!--                        <li>Прикладные пакеты для анализа данных</li>-->
+<!--                        <li>Тестирование мобильных человеко-ориентированных приложений</li>-->
+<!--                        <li>Человеко-ориентированные решения</li>-->
+<!--                        <li>Управление проектами по разработке мобильных и сетевых приложений</li>-->
+<!--                        <li>Анализ и моделирование в социальных сетях</li>-->
+<!--                    </ul>-->
+<!--                    <span class="card-date">Сентябрь 2025 &#8212 Настоящее время</span>-->
+<!--                    <br/>-->
                     <p class="card-span-title"><a href="https://www.devtools.itmo.ru/">Инструменты разработки и анализа
                         программ 09.04.04</a></p>
                     <ul class="stack-content">
@@ -275,4 +290,46 @@
 <footer>
     <span class="update-date">04.04.2025</span>
 </footer>
+<script>
+    function getYearWord(years) {
+            if (years % 10 === 1 && years % 100 !== 11) return "год";
+            if ([2, 3, 4].includes(years % 10) && ![12, 13, 14].includes(years % 100)) return "года";
+            return "лет";
+        }
+
+    function getMonthWord(months) {
+        if (months === 1) return "месяц";
+        if ([2, 3, 4].includes(months)) return "месяца";
+        return "месяцев";
+    }
+
+    function getDayWord(days) {
+        if (days === 1) return "день";
+        if ([2, 3, 4].includes(days)) return "дня";
+        return "дней";
+    }
+
+    function updateExperience() {
+        const startDate = new Date("2021-07-24");
+        const now = new Date();
+
+        let years = now.getFullYear() - startDate.getFullYear();
+        let months = now.getMonth() - startDate.getMonth();
+        let days = now.getDate() - startDate.getDate();
+
+        if (days < 0) {
+            months--;
+            days += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        }
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+         document.getElementById("experience").textContent =
+                `${years} ${getYearWord(years)}, ${months} ${getMonthWord(months)}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () { updateExperience(); });
+</script>
 </html>
