@@ -62,8 +62,9 @@ body.theme-dark {
     --card-column-border-color: var(--primary-color);
     --marker-color: var(--accent-color);
 
+    --card-name-color: var(--primary-color);
     --card-name-background-color: var(--accent-color);
-    --card-span-title-color: var(--primary-color);
+    --card-span-title-color: #222;
 
     --stack-content-li-color: var(--primary-color);
 }
@@ -330,35 +331,54 @@ h3 {
     font-size: 16px;
 }
 
+.card-container {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    margin-bottom: 16px;
+}
+
+.card-image {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .card-name {
     font-size: 18px;
     color: var(--card-name-color);
     margin-bottom: 0px;
-    background: var(--card-name-background-color);
-    padding: 10px 16px 10px 16px;
+    // background: var(--card-name-background-color);
+    font-weight: bold;
+    // padding: 10px 16px 10px 16px;
+    align: center;
     line-height: 1.5;
-    border-radius: 4px;
     letter-spacing: 1px;
     display: block;
 }
 
 .card-span-title {
     display: inline-block;
+    background: var(--card-name-background-color);
     color: var(--card-span-title-color);
+    border-radius: 4px;
+    padding: 10px 16px 10px 16px;
     font-size: 18px;
+    // font-weight: bold;
     line-height: 1.5;
     margin-top: 2px;
     margin-bottom: 4px;
-    margin-left: 4px;
+    // margin-left: 4px;
 }
 
 .card-date {
     display: inline-block;
     color: var(--card-date-color);
+    text-align: end;
     font-size: 16px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     margin-top: 8px;
     margin-left: 0;
+    margin-right: 8px;
 }
 
 @media screen and (max-width: 978px) {
