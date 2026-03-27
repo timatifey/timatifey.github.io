@@ -787,6 +787,10 @@ input:checked + .slider::before {
         padding-top: 1rem;
     }
 
+    .hero__container {
+        flex-direction: column;
+    }
+
     .hero__about {
         text-align: center;
         align-items: center;
