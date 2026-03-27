@@ -3,295 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тимофей Плетнев</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    <meta name="description" content="Тимофей Плетнев — Android-разработчик, SDK авторизации в Т-Банке, ex-Яндекс DivKit, Санкт-Петербург.">
+    <title>Тимофей Плетнев — Android-разработчик</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script defer src="scripts/main.js"></script>
 </head>
 <body>
+<script>
+    (function () {
+        try {
+            document.body.classList.add(
+                localStorage.getItem("timatifey-theme") === "dark" ? "theme-dark" : "theme-light"
+            );
+        } catch (e) {
+            document.body.classList.add("theme-light");
+        }
+    })();
+</script>
 <header class="header">
-    <span class="logo">timatifey</span>
+    <div class="header__inner container">
+        <span class="logo">timatifey</span>
+        <div class="theme-control">
+            <i class="bx bx-sun theme-control__icon" aria-hidden="true"></i>
+            <label class="theme-switch" for="theme-toggle">
+                <span class="visually-hidden">Тёмная тема</span>
+                <input type="checkbox" id="theme-toggle" aria-describedby="theme-hint"/>
+                <span class="slider round" aria-hidden="true"></span>
+            </label>
+            <i class="bx bx-moon theme-control__icon" aria-hidden="true"></i>
+            <span id="theme-hint" class="visually-hidden">Включите для тёмного оформления страницы</span>
+        </div>
+    </div>
 </header>
+
 <div class="hero">
     <div class="container hero__container">
-        <div class="hero__about">
-            <h1 class="hero__title">Android-разработчик</h1>
-            <h2 class="hero__subtitle">Тимофей Плетнев</h2>
-            <p class="hero__description">
-                г. Санкт-Петербург
-            </p>
-            <div class="hero__links">
-                <a class="hero__link" href="mailto:timofeypletnev.001@gmail.com"><i class='bx bxl-gmail'></i></a>
-                <a class="hero__link" href="https://t.me/timatifey"><i class='bx bxl-telegram'></i></a>
-                <a class="hero__link" href="https://github.com/timatifey"><i class='bx bxl-github'></i></a>
-                <a class="hero__link" href="asset/Timofey_Pletnev_CV_2025_04_04.pdf"><i class='bx bxs-file-pdf'></i></a>
-            </div>
-        </div>
         <div class="hero__box">
-            <img class="hero__box-img" src="asset/avatar.jpg" alt="">
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox"/>
-                    <div class="slider round"></div>
-                </label>
+            <img class="hero__box-img" src="asset/avatar.jpg" alt="Портрет Тимофея Плетнева" width="320" height="320">
+        </div>
+        <div class="hero__about">
+            <h1 class="hero__title">Senior Android Developer</h1>
+            <p class="hero__subtitle">Тимофей Плетнев</p>
+            <p class="hero__tagline">Развиваю SDK авторизации в <a href="https://www.tbank.ru/">Т-Банке</a>.<br/> Мэйнтейнил <a href="https://divkit.tech/ru/">SDUI DivKit</a> и развивал приложения <a href="https://www.rustore.ru/catalog/app/com.yandex.searchapp">Поиска</a> и <a href="https://www.rustore.ru/catalog/app/com.yandex.browser">Браузера</a> в <a href="https://yandex.ru/company/">Яндексе</a>.</p>
+            <p class="hero__description">Санкт-Петербург</p>
+            <div class="hero__links">
+                <a class="hero__link" href="mailto:timofeypletnev.001@gmail.com" title="Email"><i class="bx bxl-gmail" aria-hidden="true"></i></a>
+                <a class="hero__link" href="https://t.me/timatifey" title="Telegram"><i class="bx bxl-telegram" aria-hidden="true"></i></a>
+                <a class="hero__link" href="https://github.com/timatifey" title="GitHub"><i class="bx bxl-github" aria-hidden="true"></i></a>
+                <a class="hero__link hide-print" href="asset/Timofey_Pletnev_CV_2026_03_27.pdf" title="CV в PDF"><i class="bx bxs-file-pdf" aria-hidden="true"></i></a>
             </div>
         </div>
+
     </div>
 </div>
-<div class="container columns">
-    <div class="left-column">
-        <section>
-            <h1 class="section-title">Навыки и умения</h1>
-            <div class="section-content tablets">
-                <span class="tablet">Android SDK</span>
-                <span class="tablet">Java</span>
-                <span class="tablet">Kotlin</span>
-                <span class="tablet">Python</span>
-                <span class="tablet">SQL</span>
-                <span class="tablet tablet-second">Git / Arc</span>
-                <span class="tablet tablet-second">Jetpack Compose</span>
-                <span class="tablet tablet-second">Android View</span>
-                <span class="tablet tablet-second">Kotlin Coroutines</span>
-                <span class="tablet tablet-second">RxJava</span>
-                <span class="tablet tablet-second">Dagger 2 / Yatagan</span>
-                <span class="tablet tablet-second">Manual DI</span>
-                <span class="tablet tablet-second">Gradle</span>
-                <span class="tablet tablet-second">Multi-module</span>
-                <span class="tablet tablet-second">IntelliJ Platform SDK</span>
-                <span class="tablet tablet-third">Clean Architecture</span>
-                <span class="tablet tablet-third">SOLID</span>
-                <span class="tablet tablet-third">TBD</span>
-                <span class="tablet tablet-third">SDUI</span>
-                <span class="tablet tablet-third">OAuth 2 / PKCE</span>
+
+<main class="main">
+    <div class="container main__narrow">
+        <section class="section" aria-labelledby="skills-heading">
+            <h2 class="section-title" id="skills-heading">Навыки</h2>
+            <div class="section-content">
+                <div class="tablets">
+                    <span class="tablet">Kotlin</span>
+                    <span class="tablet">Java</span>
+                    <span class="tablet">Android SDK</span>
+                    <span class="tablet">Android View</span>
+                    <span class="tablet">Jetpack Compose</span>
+                    <span class="tablet">Kotlin Coroutines / Flow</span>
+                    <span class="tablet">RxJava</span>
+                    <span class="tablet tablet-second">Python</span>
+                    <span class="tablet tablet-second">Dagger 2 / Yatagan</span>
+                    <span class="tablet tablet-second">Gradle</span>
+                    <span class="tablet tablet-second">Multi-module</span>
+                    <span class="tablet tablet-second">Git / Arc</span>
+                    <span class="tablet tablet-second">SQL</span>
+                    <span class="tablet tablet-third">OAuth&nbsp;2</span>
+                    <span class="tablet tablet-third">TOTP</span>
+                    <span class="tablet tablet-third">Biometry</span>
+                    <span class="tablet tablet-third">Custom view</span>
+                    <span class="tablet tablet-third">Автотесты</span>
+                    <span class="tablet tablet-third">SDUI / <a href="https://divkit.tech/ru/">DivKit</a></span>
+                    <span class="tablet tablet-third">Clean Architecture</span>
+                    <span class="tablet tablet-third">IntelliJ Platform SDK</span>
+                </div>
             </div>
         </section>
-        <section>
+
+        <section class="section" aria-labelledby="exp-heading">
             <div class="experience-container">
-                <h1 class="section-title" id="experience-title">Опыт работы</h1>
-                <span class="card-date" id="experience"></span>
+                <h2 class="section-title section-title--inline" id="exp-heading">Опыт работы</h2>
+                <span class="experience-badge" id="experience" aria-live="polite"></span>
             </div>
-            <ul class="section-content cards-column">
-                <div class="card-column">
-                    <div class="card-container">
-                        <a href="https://www.tbank.ru/">
-                            <img src="asset/tbank.svg" alt="Лого" class="card-image"
-                                 style="height: 50px; width: auto; margin-right: 0; margin-left: -15px;"/>
-                        </a>
-                        <span class="card-name">
-                            <a href="https://www.tbank.ru/">Т-Банк</a><br/>
-                            Отдел разработки сервисов аутентификации и авторизации
-                        </span>
+            <div class="section-content cards-stack">
+
+                <article class="resume-card">
+                    <div class="resume-card__head">
+                        <a class="resume-card__logo" href="https://www.tbank.ru/" aria-label="Т-Банк"><img src="asset/tbank.svg" alt="" class="card-image"></a>
+                        <div class="resume-card__head-text">
+                            <a href="https://www.tbank.ru/" class="resume-card__company">Т-Банк</a>
+                            <p class="resume-card__meta">Команда SDK авторизации (Android): Core библиотека входа для всех продуктов экосистемы</p>
+                        </div>
                     </div>
-                    <p class="card-span-title">Старший разработчик</p>
-                    <ul class="stack-content">
-                        <li>T-ID SDK (авторизация внутри экосистемы Т-Банка)</li>
-                        <li><a href="https://opensource.tbank.ru/mobile-tech/T-ID-Android">OpenSource T-ID SDK
-                            (авторизация внешних партнеров)</a></li>
-                        <li><a href="https://www.rustore.ru/catalog/app/com.idamob.tinkoff.android">Mobile Bank
-                            (поддержка SDK внутри приложения)</a></li>
-                        <li>Разбор инцидентов клиентов</li>
-                        <li>Проведение тех. интервью в компанию</li>
-                        <li>Чтение докладов внутри команды</li>
-                    </ul>
-                    <span class="card-date">Сентябрь 2024 &#8212 Настоящее время</span>
-                    <br/>
-                    <p class="card-span-title">Разработчик</p>
-                    <ul class="stack-content">
-                        <li>T-ID SDK (авторизация внутри экосистемы Т-Банка)</li>
-                        <li><a href="https://opensource.tbank.ru/mobile-tech/T-ID-Android">OpenSource T-ID SDK
-                            (авторизация внешних партнеров)</a></li>
-                        <li><a href="https://www.rustore.ru/catalog/app/com.idamob.tinkoff.android">Mobile Bank
-                            (поддержка SDK внутри приложения)</a></li>
-                        <li>Разбор инцидентов клиентов</li>
-                        <li>Проведение тех. интервью в компанию</li>
-                        <li>Чтение докладов внутри команды</li>
-                    </ul>
-                    <span class="card-date">Сентябрь 2023 &#8212 Сентябрь 2024</span>
-                </div>
-                <div class="card-column">
-                    <div class="card-container">
-                        <a href="https://yandex.ru/company/">
-                            <img src="asset/yandex.png" alt="Лого" class="card-image"
-                                 style="height: 30px; width: auto; margin-right: 16px;"/>
-                        </a>
-                        <span class="card-name"><a href="https://yandex.ru/company/">Яндекс</a><br/><a
-                                href="https://www.rustore.ru/catalog/app/com.yandex.searchapp">Search App</a> / <a
-                                href="https://www.rustore.ru/catalog/app/com.yandex.browser">Browser</a> / <a
-                                href="https://divkit.tech/ru/">DivKit</a></span><br/>
+                    <div class="resume-card__block">
+                        <div class="resume-card__block-head">
+                            <span class="resume-card__role">Старший разработчик</span>
+                            <span class="resume-card__period">янв. 2025 — сейчас</span>
+                        </div>
+                        <ul class="stack-content">
+                            <li>Улучшил производительность анимаций пин-кода на одном из главных экранов библиотеки</li>
+                            <li>Уточняю требования и взаимодействую со смежными командами и специализациями, влияю на технические решения задач</li>
+                            <li>Разбираю инциденты клиентов по проблемам входа</li>
+                            <li>Реализовал новые шаги авторизации Flash Call, ID&nbsp;Call, TOTP</li>
+                            <li>Реализовал сценарий установки и отключения TOTP у клиента</li>
+                        </ul>
                     </div>
-                    <p class="card-span-title">Младший разработчик</p>
-                    <ul class="stack-content">
-                        <li><a href="https://github.com/divkit/divkit/tree/main/">DivKit (Server Driven UI Framework) +
-                            выход в open-source</a></li>
-                        <li><a href="https://github.com/divkit/divkit/tree/main/api_generator">DivKit Python API
-                            Generator</a></li>
-                        <li><a href="https://www.rustore.ru/catalog/app/com.yandex.searchapp">Yandex Search App</a> / <a
-                                href="https://www.rustore.ru/catalog/app/com.yandex.browser">Yandex Browser</a></li>
-                        <li>Дежурство по релизу</li>
-                        <li>A/B тестирование</li>
-                    </ul>
-                    <span class="card-date">Июнь 2022 &#8212 Сентябрь 2023</span>
-                    <br/>
-                    <p class="card-span-title">Стажер разработчик </p>
-                    <ul class="stack-content">
-                        <li><a href="https://github.com/divkit/divkit/tree/main/">DivKit (Server Driven UI
-                            Framework)</a></li>
-                        <li><a href="https://www.rustore.ru/catalog/app/com.yandex.searchapp">Yandex Search App</a> / <a
-                                href="https://www.rustore.ru/catalog/app/com.yandex.browser">Yandex Browser</a></li>
-                    </ul>
-                    <span class="card-date">Ноябрь 2021 &#8212 Июнь 2022</span>
-                </div>
-                <div class="card-column last">
-                    <div class="card-container">
-                        <a href="https://gora.studio/">
-                            <img src="asset/gora.svg" alt="Лого" class="card-image"
-                                 style="height: 50px; width: auto; margin-right: 16px; "/>
-                        </a>
-                        <span class="card-name"><a href="https://gora.studio/">GORA Studio</a></span>
+                    <div class="resume-card__block">
+                        <div class="resume-card__block-head">
+                            <span class="resume-card__role">Разработчик</span>
+                            <span class="resume-card__period">сент. 2023 — янв. 2025</span>
+                        </div>
+                        <ul class="stack-content">
+                            <li>Провёл миграцию всех экранов авторизации на компоненты внутреннего UI&nbsp;Kit</li>
+                            <li>Реализовал экран установки пароля с мгновенной валидацией</li>
+                            <li>Реализовал альтернативные сценарии авторизации: для доверителей и доверенных лиц, восстановления доступа по карте</li>
+                            <li>Поддерживаю open-source SDK для партнерской авторизации: <a href="https://opensource.tbank.ru/mobile-tech/T-ID-Android">T-ID Android</a></li>
+                            <li>Провожу dev-скрининг Android-разработчиков (интервью) для кандидатов</li>
+                        </ul>
                     </div>
-                    <p class="card-span-title">Android-разработчик</p>
-                    <ul class="stack-content">
-                        <li>Поддержка и рефакторинг СуперАппа ARROUND (мессенджер + VR)</li>
-                        <li>MVP нового приложения для голосований внутри РСПП</li>
-                    </ul>
-                    <span class="card-date">Июль 2021 &#8212 Ноябрь 2021</span>
-                </div>
-            </ul>
-        </section>
-        <section>
-            <h1 class="section-title">Языки</h1>
-            <div class="section-content tablets">
-                <span class="tablet">Русский &#8212 носитель</span>
-                <span class="tablet tablet-second">Английский &#8212 B1 средний</span>
+                </article>
+
+                <article class="resume-card">
+                    <div class="resume-card__head">
+                        <a class="resume-card__logo" href="https://yandex.ru/company/" aria-label="Яндекс"><img src="asset/yandex.png" alt="" class="card-image"></a>
+                        <div class="resume-card__head-text">
+                            <a href="https://yandex.ru/company/" class="resume-card__company">Яндекс</a>
+                            <p class="resume-card__meta">Команда SuperApp (Android): - <a href="https://divkit.tech/ru/">DivKit</a>,
+                                 <a href="https://www.rustore.ru/catalog/app/com.yandex.searchapp">Поисковое приложение Яндекса</a>, 
+                                 <a href="https://www.rustore.ru/catalog/app/com.yandex.browser">Яндекс.Браузер</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resume-card__block">
+                        <div class="resume-card__block-head">
+                            <span class="resume-card__role">Младший разработчик</span>
+                            <span class="resume-card__period">июнь 2022 — сент. 2023</span>
+                        </div>
+                        <ul class="stack-content">
+                            <li>Отрефакторил логику главной с табами (Табло) в Браузере и переиспользовал для редизайна браузера на планшетах (<a href="https://dzen.ru/a/ZNOOoVUmEXf1wUk5">обзор на Дзене</a>)</li>
+                            <li>Переписал API-генератор с Swift на Python: DTO из JSON Schema для Kotlin, Swift, Python и TypeScript (<a href="https://github.com/divkit/divkit/tree/main/api_generator">GitHub</a>)</li>
+                            <li>Реализовал генератор Kotlin DSL для DivKit - <a href="https://github.com/divkit/divkit/tree/main/json-builder/kotlin">Divan</a></li>
+                            <li>Вышли с командой <a href="https://divkit.tech/ru/">DivKit</a> в open-source (<a href="https://github.com/divkit/divkit/blob/main/AUTHORS#L19">AUTHORS</a>)</li>
+                            <li>Дежурил по релизам поискового приложения и браузера (разбор крашей, ANR): AppMetrica, Google Crashlytics</li>
+                        </ul>
+                    </div>
+                    <div class="resume-card__block">
+                        <div class="resume-card__block-head">
+                            <span class="resume-card__role">Стажёр-разработчик</span>
+                            <span class="resume-card__period">нояб. 2021 — июнь 2022</span>
+                        </div>
+                        <ul class="stack-content">
+                            <li>Реализовал виджет в <a href="https://www.rustore.ru/catalog/app/com.yandex.browser">Яндекс.Браузере</a> с динамическим QR-кодом</li>
+                            <li>Реализовал анимацию для <a href="https://divkit.tech/docs/ru/concepts/divs/2/div-slider">div-slider</a>, 
+                                поддержал <a href="https://divkit.tech/docs/ru/concepts/divs/2/div-radial-gradient">радиальный градиент</a>, 
+                                <a href="https://divkit.tech/docs/ru/concepts/divs/2/div-nine-patch-background">nine-patch</a>, 
+                                анимации в <a href="https://divkit.tech/docs/ru/concepts/divs/2/div-tabs">div-tabs</a>, 
+                                хранение div-констант, маски номеров телефона в полях ввода в DivKit</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="resume-card resume-card--last">
+                    <div class="resume-card__head">
+                        <a class="resume-card__logo" href="https://gora.studio/" aria-label="GORA Studio"><img src="asset/gora.svg" alt="" class="card-image"></a>
+                        <div class="resume-card__head-text">
+                            <a href="https://gora.studio/" class="resume-card__company">GORA Studio</a>
+                            <p class="resume-card__meta">Коммерческая outsource Android-разработка</p>
+                        </div>
+                    </div>
+                    <div class="resume-card__block">
+                        <div class="resume-card__block-head">
+                            <span class="resume-card__role">Android-разработчик</span>
+                            <span class="resume-card__period">июль 2021 — нояб. 2021</span>
+                        </div>
+                        <ul class="stack-content">
+                            <li>Отрефакторил экран чата (более 2000 строк) в SuperApp приложении соц. сети - ARROUND</li>
+                            <li>Реализовал с нуля приложение для голосований для <a href="https://www.rspp.ru/">РСПП</a></li>
+                            <li>Реализовал навигацию в приложении для РСПП</li>
+                            <li>Реализовал бизнес-логику голосований</li>
+                            <li>Ввёл для команды регулярное код-ревью</li>
+                        </ul>
+                    </div>
+                </article>
+
             </div>
         </section>
-    </div>
-    <div class="right-column">
-        <section>
-            <h1 class="section-title">Образование</h1>
-            <div class="section-content cards-column">
-                <div class="card-column">
-                    <div class="card-container">
-                        <a href="https://itmo.ru/">
-                            <img src="asset/itmo.png" alt="Лого"
-                                 class="card-image"
-                                 style="height: 50px; width: auto; margin-right: 0; margin-left: -10px;"/>
-                        </a>
-                        <span class="card-name">Магистрант <a href="https://itmo.ru/">Университета ИТМО</a></span>
+
+        <section class="section" aria-labelledby="edu-heading">
+            <h2 class="section-title" id="edu-heading">Образование</h2>
+            <div class="section-content cards-stack">
+                <article class="resume-card">
+                    <div class="resume-card__head">
+                        <a class="resume-card__logo" href="https://itmo.ru/" aria-label="ИТМО"><img src="asset/itmo.png" alt="" class="card-image"></a>
+                        <div class="resume-card__head-text">
+                            <a class="resume-card__company" href="https://itmo.ru/">Университет ИТМО</a>
+                            <p class="resume-card__meta">Магистратура, сент. 2023 — сейчас</p>
+                        </div>
                     </div>
-<!--                    <p class="card-span-title"><a href="https://abit.itmo.ru/program/master/cloud">Мобильные и облачные-->
-<!--                        технологии 09.04.03</a></p>-->
-<!--                    <ul class="stack-content">-->
-<!--                        <li>Методология организации проектирования и разработки информационных систем</li>-->
-<!--                        <li>Разработка мобильных приложений</li>-->
-<!--                        <li>Архитектура сетей и облачные технологии</li>-->
-<!--                        <li>Хранение и обработка облачных данных</li>-->
-<!--                        <li>Системный анализ и моделирование информационных процессов и систем</li>-->
-<!--                        <li>Администрирование платформ на OC Linux</li>-->
-<!--                        <li>Прикладные пакеты для анализа данных</li>-->
-<!--                        <li>Тестирование мобильных человеко-ориентированных приложений</li>-->
-<!--                        <li>Человеко-ориентированные решения</li>-->
-<!--                        <li>Управление проектами по разработке мобильных и сетевых приложений</li>-->
-<!--                        <li>Анализ и моделирование в социальных сетях</li>-->
-<!--                    </ul>-->
-<!--                    <span class="card-date">Сентябрь 2025 &#8212 Настоящее время</span>-->
-<!--                    <br/>-->
-                    <p class="card-span-title"><a href="https://www.devtools.itmo.ru/">Инструменты разработки и анализа
-                        программ 09.04.04</a></p>
-                    <ul class="stack-content">
-                        <li>Введение в анализ и верификацию ПО</li>
-                        <li>Программная инженерия</li>
-                        <li>Математическая логика и теория доказательств</li>
-                        <li>Углубленное программирование на языке Java</li>
-                        <li>Функциональное программирование</li>
-                    </ul>
-                    <span class="card-date">Сентябрь 2023 &#8212 Январь 2024</span>
-                </div>
-                <div class="card-column">
-                    <div class="card-container">
-                        <a href="https://www.spbstu.ru/">
-                            <img src="asset/poly.svg" alt="Лого"
-                                 class="card-image"
-                                 style="height: 60px; width: auto; margin-right: 0; margin-left: -15px;"/>
-                        </a>
-                        <span class="card-name">Бакалавр <a
-                                href="https://www.spbstu.ru/">СПбПУ Петра Великого</a></span>
+                    <div class="resume-card__block">
+                        <p class="resume-card__text"><a href="https://abit.itmo.ru/program/master/cloud">«Мобильные и облачные технологии»</a> (09.04.03), сент. 2025 — настоящее время.</p>
+                        <p class="resume-card__text"><a href="https://www.devtools.itmo.ru/">«Инструменты разработки и анализа программ»</a> (09.04.04), сент. 2023 — янв. 2024.</p>
                     </div>
-                    <p class="card-span-title"><a href="https://iccs.spbstu.ru/edu/09.03.01/09.03.01_02/">Информатика и
-                        вычислительная техника 09.03.01<br/>Технологии разработки программного обеспечения</a></p>
-                    <ul class="stack-content">
-                        <li>Алгоритмизация и программирование (Kotlin)</li>
-                        <li>Технологии программирования (Java)</li>
-                        <li>Алгоритмы и структуры данных</li>
-                        <li>Проектирование мобильных приложений</li>
-                        <li>Базы данных</li>
-                        <li>Основы программной инженерии</li>
-                        <li>Тестирование программного обеспечения</li>
-                    </ul>
-                    <p class="card-span-title">Разработка плагина для просмотра в реальном времени пользовательского
-                        интерфейса фреймворка DivKit в среде Android Studio</p>
-                    <span class="card-date">Сентябрь 2019 &#8212 Июнь 2023</span>
-                </div>
-                <div class="card-column last">
-                    <div class="card-container">
-                        <a href="https://polis.vk.company/">
-                            <img src="asset/vk.svg" alt="Лого"
-                                 class="card-image" style="height: 40px; width: auto; margin-right: 16px;"/>
-                        </a>
-                            <span class="card-name"><a
-                                    href="https://polis.vk.company/">Технополис Mail.ru при СПбПУ</a></span><br/>
+                </article>
+
+                <article class="resume-card">
+                    <div class="resume-card__head">
+                        <a class="resume-card__logo" href="https://www.spbstu.ru/" aria-label="СПбПУ"><img src="asset/poly.svg" alt="" class="card-image"></a>
+                        <div class="resume-card__head-text">
+                            <a class="resume-card__company" href="https://www.spbstu.ru/">СПбПУ Петра Великого</a>
+                            <p class="resume-card__meta">Бакалавриат, сент. 2019 — июнь 2023</p>
+                        </div>
                     </div>
-                    <p class="card-span-title">Java-разработчик высоконагруженных приложений</p>
-                    <ul class="stack-content">
-                        <li>Алгоритмы и структуры данных</li>
-                        <li>Frontend разработка</li>
-                        <li>Углубленная Java</li>
-                        <li>Мобильная разработка</li>
-                        <li>Базы данных</li>
-                        <li>Безопасность интернет-приложений</li>
-                        <li>Автоматизированное тестирование</li>
-                        <li>Проектирование высоконагруженных систем</li>
-                    </ul>
-                    <span class="card-date">Октябрь 2020 &#8212 Январь 2022</span>
+                    <div class="resume-card__block">
+                        <p class="resume-card__text"><a href="https://iccs.spbstu.ru/edu/09.03.01/09.03.01_02/">«Информатика и вычислительная техника»</a> (09.03.01), профиль «Технологии разработки ПО».</p>
+                    </div>
+                </article>
+
+                <article class="resume-card resume-card--last">
+                    <div class="resume-card__head">
+                        <a class="resume-card__logo" href="https://polis.vk.company/" aria-label="Технополис"><img src="asset/vk.svg" alt="" class="card-image"></a>
+                        <div class="resume-card__head-text">
+                            <a href="https://polis.vk.company/" class="resume-card__company">Технополис Mail.ru</a>
+                            <p class="resume-card__meta">Дополнительное образование при СПбПУ, окт. 2020 — янв. 2022</p>
+                        </div>
+                    </div>
+                    <div class="resume-card__block"></p>
+                        <p class="resume-card__text"><a href="https://polis.vk.company/">«Java-разработчик высоконагруженных приложений»</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="lang-heading">
+            <h2 class="section-title" id="lang-heading">Языки</h2>
+            <div class="section-content">
+                <div class="tablets">
+                    <span class="tablet tablet-second">Русский — родной</span>
+                    <span class="tablet tablet-second">Английский — B2 (Upper-Intermediate)</span>
                 </div>
             </div>
         </section>
-        <section>
-            <h1 class="section-title">Социальная активность</h1>
-            <div class="section-content cards-column">
-                <div class="card-column">
-                    <span class="card-span-title">Проведение Android-собеседований в компанию</span><br/>
-                    <span class="card-date">Февраль 2024 &#8212 Настоящее время</span>
-                </div>
-                <div class="card-column">
-                    <span class="card-span-title">Преподавание курса Python для школьников</span><br/>
-                    <span class="card-date">Октябрь 2022</span>
-                </div>
-                <div class="card-column last">
-                    <span class="card-span-title">Преподавание курса Kotlin и Android-разработка для школьников</span><br/>
-                    <span class="card-date">Июль 2021</span>
-                </div>
+
+        <section class="section" aria-labelledby="mentor-heading">
+            <h2 class="section-title" id="mentor-heading">Преподавание и найм</h2>
+            <div class="section-content">
+                <ul class="stack-content">
+                    <li>Провожу dev-скрининг собеседования по Android в компанию (с февраля 2024)</li>
+                    <li>Преподавал курс по Python школьникам (октябрь 2022)</li>
+                    <li>Преподавал курс по Kotlin и Android школьникам (июль 2021)</li>
+                </ul>
             </div>
         </section>
-        <section>
-            <h1 class="section-title">Хобби</h1>
-            <div class="section-content tablets">
-                <span class="tablet">Бальные танцы</span>
-                <span class="tablet">Волейбол</span>
-                <span class="tablet">Дизайн</span>
-                <span class="tablet">Психология</span>
-                <span class="tablet">Видео-игры</span>
+
+        <section class="section" aria-labelledby="hobby-heading">
+            <h2 class="section-title" id="hobby-heading">Хобби</h2>
+            <div class="section-content">
+                <div class="tablets">
+                    <span class="tablet tablet-second">Бальные танцы</span>
+                    <span class="tablet tablet-second">Волейбол</span>
+                    <span class="tablet tablet-second">Дизайн</span>
+                    <span class="tablet tablet-second">Психология</span>
+                    <span class="tablet tablet-second">Видеоигры</span>
+                </div>
             </div>
         </section>
     </div>
-</div>
-</body>
-<footer>
-    <span class="update-date">04.04.2025</span>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <span class="update-dat">Обновлено 27.03.2026 <a href="https://timatifey.github.io/" class="actual-cv">(сайт с актуальным CV)</a></span>
+    </div>
 </footer>
+
 <script>
     function getYearWord(years) {
             if (years % 10 === 1 && years % 100 !== 11) return "год";
@@ -305,14 +302,13 @@
         return "месяцев";
     }
 
-    function getDayWord(days) {
-        if (days === 1) return "день";
-        if ([2, 3, 4].includes(days)) return "дня";
-        return "дней";
+    function getMonthWord(months) {
+        if (months === 1) return "месяц";
+        if ([2, 3, 4].includes(months)) return "месяца";
+        return "месяцев";
     }
 
-    function updateExperience() {
-        const startDate = new Date("2021-07-24");
+    function formatRoundedExperienceYears(startDate) {
         const now = new Date();
 
         let years = now.getFullYear() - startDate.getFullYear();
@@ -327,11 +323,23 @@
             years--;
             months += 12;
         }
-
-         document.getElementById("experience").textContent =
-                `${years} ${getYearWord(years)}, ${months} ${getMonthWord(months)}`;
+        if (months > 7) {
+            years++;
+        }
+        return `~${years} ${getYearWord(years)}`;
     }
 
-    document.addEventListener("DOMContentLoaded", function () { updateExperience(); });
+    function updateExperience() {
+        var startDate = new Date("2021-07-24");
+        var el = document.getElementById("experience");
+        if (el) {
+            el.textContent = formatRoundedExperienceYears(startDate);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        updateExperience();
+    });
 </script>
+</body>
 </html>
